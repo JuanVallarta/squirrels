@@ -2,7 +2,7 @@
 % Please edit documentation in R/check_primary_color_is_ok.R
 \name{check_primary_color_is_ok}
 \alias{check_primary_color_is_ok}
-\title{Check the values of primary fur color}
+\title{Check the values of a vector of primary fur colors}
 \usage{
 check_primary_color_is_ok(string)
 }
@@ -13,15 +13,9 @@ check_primary_color_is_ok(string)
 Boolean. TRUE if all colors are correct.
 }
 \description{
-Check the values of primary fur color
+Check the values of a vector of primary fur colors
 }
 \examples{
-string = c("Gray", "Cinnamon")
-check_primary_color_is_ok(string = string)
-
-string = c("Gray")
-check_primary_color_is_ok(string = string)
-
-string = c("Black", "Cinnamon")
-check_primary_color_is_ok(string = string)
+check_primary_color_is_ok(string = c("Black", "Cinnamon", NA))
+check_primary_color_is_ok(string = c("Gray", "Cinnamon", "Gray"))
 }

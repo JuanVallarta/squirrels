@@ -33,7 +33,9 @@ usethis::use_mit_license("Margot Brard")
 ```{r, eval=FALSE}
 usethis::use_git()
 
-
+usethis::use_git_remote("origin",
+                        url = "https://github.com/JuanVallarta/squirrels.git",
+                        overwrite = TRUE)
 
 # Deal with classical files to ignore
 usethis::git_vaccinate()
@@ -92,6 +94,7 @@ fusen::add_flat_template(template = "additional",
 ```{r}
 # data_act_squirrels
 usethis::use_data_raw("data_act_squirrels") # create the dataset in this file
+# usethis::use_data("data_squirrels_act") 
 checkhelper::use_data_doc("data_act_squirrels")
 rstudioapi::navigateToFile("R/data_act_squirrels.R") # create the documentation of the dataset
 attachment::att_amend_desc() # update the documentation of the dataset
